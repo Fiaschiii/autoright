@@ -10,6 +10,9 @@ on:
   schedule:
     - cron: '0 9 * * *'
 
+permissions: 
+  contents: read
+
 jobs:
   test:
     name: Testes E2E (${{ matrix.project }})
