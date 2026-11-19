@@ -1,0 +1,13 @@
+node_modules/
+
+# Saídas do Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Sessão salva pelo auth.setup.js (contém cookies, nunca versionar)
+/playwright/.auth/
+
+.env
+.DS_Store

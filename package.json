@@ -1,0 +1,27 @@
+{
+  "name": "autoright",
+  "version": "1.0.0",
+  "description": "Suíte de testes E2E com Playwright + JavaScript para o e-commerce SauceDemo",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:headed": "playwright test --project=chromium --headed --workers=1",
+    "test:ui": "playwright test --ui",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:debug": "playwright test --project=chromium --debug",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://www.saucedemo.com"
+  },
+  "keywords": [
+    "playwright",
+    "e2e",
+    "testing",
+    "automation",
+    "qa"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1"
+  }
+}
