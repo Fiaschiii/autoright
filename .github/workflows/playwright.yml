@@ -31,8 +31,9 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
-      - name: Instalar navegador
-        run: npx playwright install --with-deps ${{ matrix.project }}
+      # O chromium é sempre necessário: o projeto "setup" (login) roda nele
+      - name: Instalar navegadores
+        run: npx playwright install --with-deps chromium ${{ matrix.project }}
 
       - name: Rodar testes
         run: npx playwright test --project=${{ matrix.project }}

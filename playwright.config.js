@@ -29,7 +29,8 @@ export default defineConfig({
 
   projects: [
     // 1) Faz login uma única vez e salva a sessão (cookies) em arquivo
-    { name: 'setup', testMatch: /.*\.setup\.js/ },
+    //    Roda sempre no Chromium, então ele precisa estar instalado em todo ambiente
+    { name: 'setup', testMatch: /.*\.setup\.js/, use: { ...devices['Desktop Chrome'] } },
 
     // 2) Os demais testes reaproveitam essa sessão e já começam logados
     {
